@@ -6,8 +6,10 @@ function subtract(a = 0, b = 0) {
   return a - b;
 }
 
-function divide(a = 0, b = 0) {
-  return a / b;
+function divide(a, b) {
+  if (b === 0) {
+    throw new Error('An explanatory error message');
+  } else return a / b;
 }
 
 function multiply(a, b) {
